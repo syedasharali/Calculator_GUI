@@ -1,10 +1,11 @@
 from tkinter import *
-root=Tk()
 
+root=Tk()
 root.title('Calculator')
-root.geometry('400x400')
-root.iconbitmap('calc.ico')
+root.iconbitmap(r'calc.ico')
+root.geometry('408x400')
 root.resizable(0,0)
+
 
 entry=StringVar()
 
@@ -86,7 +87,7 @@ def nexp():
         if entry.get()[-1] not in list('+-x/'):
             enter.insert(END,'e')
     
-def nequal():
+def nequal(evt):
     entryget=entry.get()
     if 'x' in list(entryget):
         entryget=list(entry.get())
@@ -106,30 +107,35 @@ def clear_all():
     
 
 
+
+
 enter=Entry(root,textvariable=entry,bd=2,font='Helvetica 20')
-enter.grid(columnspan=5,padx=5,pady=10,ipadx=35,ipady=18)
+enter.grid(columnspan=5,padx=5,pady=20,ipadx=35,ipady=8)
 
-Button(root,text='7',font='Helvetica 20',command=n7).grid(row=1,column=0,ipadx=19,ipady=8,padx=4,pady=2)
-Button(root,text='8',font='Helvetica 20',command=n8).grid(row=1,column=1,ipadx=19,ipady=8,pady=2)
-Button(root,text='9',font='Helvetica 20',command=n9).grid(row=1,column=2,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='/',font='Helvetica 20',command=ndivide).grid(row=1,column=3,ipadx=19,ipady=8,pady=2)
-Button(root,text='C',font='Helvetica 20',command=clear_all).grid(row=1,column=4,ipadx=13,ipady=8,padx=1.9,pady=2)
+Button(root,text='7',font='Helvetica 20',command=n7).grid(row=1,column=0,ipadx=19,ipady=8,padx=4,pady=2,sticky='ew')
+Button(root,text='8',font='Helvetica 20',command=n8).grid(row=1,column=1,ipadx=19,ipady=8,pady=2,sticky='ew')
+Button(root,text='9',font='Helvetica 20',command=n9).grid(row=1,column=2,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='/',font='Helvetica 20',command=ndivide).grid(row=1,column=3,ipadx=19,ipady=8,pady=2,sticky='ew')
+Button(root,text='C',font='Helvetica 20',command=clear_all).grid(row=1,column=4,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
 
-Button(root,text='4',font='Helvetica 20',command=n4).grid(row=2,column=0,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='5',font='Helvetica 20',command=n5).grid(row=2,column=1,ipadx=19,ipady=8,pady=2)
-Button(root,text='6',font='Helvetica 20',command=n6).grid(row=2,column=2,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='x',font='Helvetica 20',command=nx).grid(row=2,column=3,ipadx=19,ipady=8,pady=2)
-Button(root,text='<-',font='Helvetica 20',command=clear).grid(row=2,column=4,ipadx=11,ipady=8,padx=1.9,pady=2)
+Button(root,text='4',font='Helvetica 20',command=n4).grid(row=2,column=0,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='5',font='Helvetica 20',command=n5).grid(row=2,column=1,ipadx=19,ipady=8,pady=2,sticky='ew')
+Button(root,text='6',font='Helvetica 20',command=n6).grid(row=2,column=2,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='x',font='Helvetica 20',command=nx).grid(row=2,column=3,ipadx=19,ipady=8,pady=2,sticky='ew')
+Button(root,text='<-',font='Helvetica 20',command=clear).grid(row=2,column=4,ipadx=11,ipady=8,padx=1.9,pady=2,sticky='ew')
 
-Button(root,text='1',font='Helvetica 20',command=n1).grid(row=3,column=0,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='2',font='Helvetica 20',command=n2).grid(row=3,column=1,ipadx=19,ipady=8,pady=2)
-Button(root,text='3',font='Helvetica 20',command=n3).grid(row=3,column=2,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='+',font='Helvetica 20',command=nplus).grid(rowspan=2,row=3,column=3,ipadx=17,ipady=46,pady=2)
-Button(root,text='-',font='Helvetica 20',command=nminus).grid(row=3,column=4,ipadx=19,ipady=8,padx=1.9,pady=2)
+Button(root,text='1',font='Helvetica 20',command=n1).grid(row=3,column=0,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='2',font='Helvetica 20',command=n2).grid(row=3,column=1,ipadx=19,ipady=8,pady=2,sticky='ew')
+Button(root,text='3',font='Helvetica 20',command=n3).grid(row=3,column=2,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='+',font='Helvetica 20',command=nplus).grid(rowspan=2,row=3,column=3,ipadx=17,ipady=46,pady=2,sticky='ew')
+Button(root,text='-',font='Helvetica 20',command=nminus).grid(row=3,column=4,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
 
-Button(root,text='0',font='Helvetica 20',command=n0).grid(row=4,column=0,ipadx=19,ipady=8,padx=1.9,pady=2)
-Button(root,text='.',font='Helvetica 20',command=ndot).grid(row=4,column=1,ipadx=21,ipady=8,pady=2)
-Button(root,text='e',font='Helvetica 20',command=nexp).grid(row=4,column=2,ipadx=17,ipady=8,padx=1.9,pady=2)
-Button(root,text='=',font='Helvetica 20',command=nequal).grid(row=4,column=4,ipadx=15.6,ipady=8,padx=1.9,pady=2)
+Button(root,text='0',font='Helvetica 20',command=n0).grid(row=4,column=0,ipadx=19,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='.',font='Helvetica 20',command=ndot).grid(row=4,column=1,ipadx=21,ipady=8,pady=2,sticky='ew')
+Button(root,text='e',font='Helvetica 20',command=nexp).grid(row=4,column=2,ipadx=17,ipady=8,padx=1.9,pady=2,sticky='ew')
+Button(root,text='=',font='Helvetica 20',command=lambda: nequal(1)).grid(row=4,column=4,ipadx=15.6,ipady=8,padx=1.9,pady=2,sticky='ew')
+
+enter.focus_set()
+root.bind('<Return>',nequal)
 
 root.mainloop()
