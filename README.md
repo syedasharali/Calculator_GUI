@@ -17,3 +17,8 @@ A simple calculator GUI application developed using the Tkinter library in Pytho
 
 ## Usage
 ### Screenshots
+
+-![Usage](screenshots/1675259071.9169865.jpg)
+-![Usage](screenshots/1675259089.184096.jpg)
+-![Usage](screenshots/1675259218.0764048.jpg)
+-![Usage](screenshots/1675259220.006295.jpg)
