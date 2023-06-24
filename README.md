@@ -22,3 +22,11 @@ A simple calculator GUI application developed using the Tkinter library in Pytho
 -![Usage](screenshots/1675259089.184096.jpg)
 -![Usage](screenshots/1675259218.0764048.jpg)
 -![Usage](screenshots/1675259220.006295.jpg)
+
+## Contact
+
+**syedasharali092@gmail.com**
+
+## Support My Projects
+
+https://www.patreon.com/ashar2friends
